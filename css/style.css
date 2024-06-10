@@ -16,7 +16,7 @@ main {
 .container {
     /* debug */
     width: 100%;
-    min-height: 500px;
+    max-height: 500px;
     background-color: aquamarine;
     position: relative;
 }
@@ -24,8 +24,13 @@ main {
 /* stile immagini */
 .item {
     width: 100%;
-    display: flex;
+    display: none;
     justify-content: center;
+
+}
+
+.active {
+    display: flex;
 }
 
 .item img {
