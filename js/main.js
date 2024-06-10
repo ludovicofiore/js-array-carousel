@@ -24,5 +24,59 @@ for (let i = 0; i < carouselImage.length; i++) {
 // seleziono elementi item 
 const items = document.getElementsByClassName("item");
 
-// aggiungo classe active 
-items[0].classList.add("active"); 
+// aggiungo classe active al primo elemento
+let activeItem = 0;
+items[activeItem].classList.add("active"); 
+
+
+// getione click per prossima immagine
+
+// dichiaro variabile bottone
+const nextButton = document.getElementById("up");
+
+nextButton.addEventListener("click",
+    function() {
+
+        // verifico di non essere all'ultima immagine
+        if (activeItem < carouselImage.length - 1) {
+
+            // elimino classe active da elemento precedente
+            items[activeItem].classList.remove("active"); 
+
+            // incremento valore indice
+            activeItem++;
+
+            // aggiungo classe active
+            items[activeItem].classList.add("active");
+        }
+
+    
+    }
+)
+
+
+// gestione click per immagine precedente
+
+// dichiaro variabile bottone
+const previousButton = document.getElementById("down");
+
+previousButton.addEventListener("click",
+    function() {
+        
+
+        // verifico di non essere alla prima immagine
+        if (activeItem > 0 ) {
+
+            // elimino classe active da elemento precedente
+            items[activeItem].classList.remove("active"); 
+
+            // decremento valore indice
+            activeItem--;
+
+            // aggiungo classe active
+            items[activeItem].classList.add("active");
+        }
+
+    
+    }
+)
