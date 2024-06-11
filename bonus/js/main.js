@@ -87,7 +87,7 @@ previousButton.addEventListener("click",
             // aggiungo classe active
             items[activeItem].classList.add("active");
 
-        } else if (activeItem = 0) { 
+        } else if (activeItem === 0) {  //partendo dalla prima immagine posso andare sull'ultima
 
             items[activeItem].classList.remove("active"); 
 
